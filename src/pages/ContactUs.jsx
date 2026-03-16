@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 // import contactBg from '../assets/contact-bg.jpg'; 
 
 export default function ContactUs() {
@@ -193,11 +193,15 @@ export default function ContactUs() {
         style={{ backgroundColor: '#4a5568' }} // Background image add panna mathikonga
       >
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-        <div className="relative z-10 text-center mt-10">
-          <h1 className="text-4xl md:text-5xl font-bold mb-3 tracking-wide">Contact Us</h1>
-          <p className="text-lg font-medium tracking-wider">Home <span className="mx-2">/</span> Contact Us</p>
+        <div className="relative z-10 text-center px-4">
+          <h1 className="text-5xl md:text-7xl font-bold mb-4 tracking-tight drop-shadow-lg">Contact Us</h1>
+          <nav className="flex items-center justify-center gap-2 text-lg font-semibold bg-white/10 backdrop-blur-sm px-6 py-2 rounded-full mx-auto w-fit border border-white/20">
+            <Link to="/" className="text-orange-400 hover:text-orange-300 transition-colors">Home</Link>
+            <span className="text-gray-400">/</span>
+            <span className="text-white">Contact Us</span>  
+          </nav>
         </div>
-      </div>
+      </div>  
 
       {/* --- Locations Grid Section --- */}
       <div className="max-w-7xl mx-auto px-4 py-16">

@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
   
 // Unga background image-ah inga import pannikonga (hero section-kaga)
 // import aboutBg from '../assets/about-bg.jpg'; 
@@ -18,9 +20,13 @@ export default function AboutUs() {
         {/* Dark Overlay (text theliva theriya) */}
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         
-        <div className="relative z-10 text-center mt-10">
-          <h1 className="text-4xl md:text-5xl font-bold mb-3 tracking-wide">About Us</h1>
-          <p className="text-lg font-medium tracking-wider">Home <span className="mx-2">/</span> About Us</p>
+        <div className="relative z-10 text-center px-4">
+          <h1 className="text-5xl md:text-7xl font-bold mb-4 tracking-tight drop-shadow-lg">About Us</h1>
+          <nav className="flex items-center justify-center gap-2 text-lg font-semibold bg-white/10 backdrop-blur-sm px-6 py-2 rounded-full mx-auto w-fit border border-white/20">
+            <Link to="/" className="text-orange-400 hover:text-orange-300 transition-colors">Home</Link>
+            <span className="text-gray-400">/</span>
+            <span className="text-white">About Us</span>  
+          </nav>          
         </div>
       </div>
 
