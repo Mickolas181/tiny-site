@@ -1,0 +1,117 @@
+import React from 'react';
+// Unga hero background image-ah inga import pannikonga
+// import servicesBg from '../assets/services-bg.jpg'; 
+
+export default function Services() {
+
+    return (
+    <div className="font-sans">
+      
+      {/* --- Hero Banner Section --- */}
+      <div 
+        className="relative w-full h-[300px] md:h-[400px] bg-cover bg-center flex flex-col justify-center items-center text-white"
+        // style={{ backgroundImage: `url(${servicesBg})` }} // Image add panna idha uncomment pannunga
+        style={{ backgroundColor: '#4a5568' }} // Image illana indha dummy color theriyum
+      >
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+        
+        <div className="relative z-10 text-center mt-10">
+          <h1 className="text-4xl md:text-5xl font-bold mb-3 tracking-wide">Services</h1>
+          <p className="text-lg font-medium tracking-wider">Home <span className="mx-2">/</span> Services</p>
+        </div>
+      </div>
+
+      {/* --- Main Content Section --- */}
+      <div className="max-w-6xl mx-auto px-4 py-16 text-gray-700">
+        
+        {/* Top Two Columns: Our Services & Used Methods */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16 ml-4 md:ml-10">
+          
+          {/* Our Services */}
+          <div>
+            <h2 className="text-2xl font-bold text-[#fe5d44] mb-6">Our Services</h2>
+            <ul className="space-y-3 text-gray-600 font-medium">
+              <li>Occupation Therapy</li>
+              <li>Speech Therapy</li>
+              <li>Physiotherapy</li>
+              <li>Special Education</li>
+            </ul>
+          </div>
+
+          {/* Used Methods */}
+          <div>
+            <h2 className="text-2xl font-bold text-[#fe5d44] mb-6">Used Methods</h2>
+            <ul className="space-y-3 text-gray-600 font-medium">
+              <li>Inclusion</li>
+              <li>Mainstreaming</li>
+              <li>Exclusion</li>
+              <li>Segreation</li>
+            </ul>
+          </div>
+          
+        </div>
+
+        {/* Common Special Needs Section */}
+        <div className="ml-4 md:ml-10">
+          <h2 className="text-2xl font-bold text-[#fe5d44] mb-8">Common Special needs include</h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-12">
+            
+            {/* Neurodevelopmental */}
+            <div>
+              <h3 className="text-lg font-bold text-gray-800 mb-4 uppercase">NEURODEVELOPMENTAL THERAPY:</h3>
+              <ul className="list-disc list-inside space-y-2 text-gray-600">
+                <li>Poor Head Control</li>
+                <li>Poor Trunk Control</li>
+                <li>Poor Sitting Balance</li>
+                <li>Difficulty in Crawling</li>
+                <li>Poor Standing Balance and Walking</li>
+              </ul>
+            </div>
+
+            {/* Sensory Integration */}
+            <div>
+              <h3 className="text-lg font-bold text-gray-800 mb-4 uppercase">SENSORY INTEGRATION THERAPY:</h3>
+              <ul className="list-disc list-inside space-y-2 text-gray-600">
+                <li>Fear of Height (gravitational insecurity)</li>
+                <li>Aversion to touch eg., refuse to hair cut and nail cut, refuse to wear certain textured cloth, avoid Sticky things, feel irritable while walking in grass with bare foot.</li>
+                <li>Difficulty in concentrate an activity.</li>
+                <li>Difficulty in sitting straight for long period. (frequently changing the posture)</li>
+                <li>Closes ear for loud noise and seek more noise</li>
+                <li>Hyperactivity and inattention</li>
+                <li>Poor Social Interaction</li>
+                <li>Clumsiness and Poor Gross and Fine Motor Co-ordination</li>
+              </ul>
+            </div>
+
+            {/* Hand Writing */}
+            <div>
+              <h3 className="text-lg font-bold text-gray-800 mb-4 uppercase">HAND WRITING IMPROVEMENT:</h3>
+              <ul className="list-disc list-inside space-y-2 text-gray-600">
+                <li>Poor Legibility</li>
+                <li>Inadequate Spacing and Size</li>
+                <li>Slow Writing</li>
+                <li>Poor Copying</li>
+                <li>Mirror Image in Writing eg, Write "WAS" as "SAW"</li>
+              </ul>
+            </div>
+
+            {/* Cognitive Function */}
+            <div>
+              <h3 className="text-lg font-bold text-gray-800 mb-4 uppercase">COGNITIVE FUNCTION:</h3>
+              <ul className="list-disc list-inside space-y-2 text-gray-600">
+                <li>Poor Memory</li>
+                <li>Poor Attention and Concentration</li>
+                <li>Poor Problem Solving</li>
+                <li>Poor Judgement</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  );
+}

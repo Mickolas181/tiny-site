@@ -21,7 +21,7 @@ header ul li {
 }
 
 .mobile-nav {
-  @apply fixed top-10 left-0 bg-red-600 w-full h-1/5;
+  @apply fixed top-10 left-0 bg-black w-full h-1/5;
 }
 
 .mobile-nav li {
@@ -33,5 +33,21 @@ header ul li {
 }
 
 .project-desc {
-  @apply absolute left-0 right-0 bottom-[0px] top-0 bg-sec opacity-0 duration-500 hover:opacity-100;
+  @apply absolute left-0 right-0 bottom-[0px] top-0 bg-sec opacity-0 duration-500 active:opacity-100 hover:opacity-100;
+}
+
+.btn{
+  @apply bg-pri px-5 py-2 font-bold hover:border-2 border-white rounded;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+.bg-p{
+  background-color: brown;
+}
+
+.bg-s{
+  background-color: orangered;
 }
