@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 // import contactBg from '../assets/contact-bg.jpg'; 
 
 export default function ContactUs() {
@@ -185,7 +186,7 @@ export default function ContactUs() {
   ];
 
   return (
-    <div className="font-sans bg-gray-50 min-h-screen">
+    <div className="font-sans bg-gray-50 min-h-screen overflow-hidden">
       
       {/* --- Hero Banner Section --- */}
       <div 
@@ -193,14 +194,19 @@ export default function ContactUs() {
         style={{ backgroundColor: '#4a5568' }} // Background image add panna mathikonga
       >
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-        <div className="relative z-10 text-center px-4">
+        <motion.div 
+          className="relative z-10 text-center px-4"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
           <h1 className="text-5xl md:text-7xl font-bold mb-4 tracking-tight drop-shadow-lg">Contact Us</h1>
           <nav className="flex items-center justify-center gap-2 text-lg font-semibold bg-white/10 backdrop-blur-sm px-6 py-2 rounded-full mx-auto w-fit border border-white/20">
             <Link to="/" className="text-orange-400 hover:text-orange-300 transition-colors">Home</Link>
             <span className="text-gray-400">/</span>
             <span className="text-white">Contact Us</span>  
           </nav>
-        </div>
+        </motion.div>
       </div>  
 
       {/* --- Locations Grid Section --- */}
@@ -210,7 +216,14 @@ export default function ContactUs() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
           
           {locationsData.map((loc, index) => (
-            <div key={index} className="flex flex-col">
+            <motion.div 
+              key={index} 
+              className="flex flex-col"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true, amount: 0.2 }}
+            >
               
               {/* Location Name */}
               <h2 className="text-2xl font-bold text-gray-900 mb-6">{loc.area}</h2>
@@ -246,7 +259,7 @@ export default function ContactUs() {
                 </div>
 
               </div>
-            </div>
+            </motion.div>
           ))}
 
         </div>
