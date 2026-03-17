@@ -1,4 +1,4 @@
-import ResumeImg from '../assets/resume.jpg'
+const ResumeImg = 'https://placehold.co/300x400?text=Resume';
 import { resume } from 'react-dom/server'
 export default function Resume(){
 

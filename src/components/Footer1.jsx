@@ -1,5 +1,4 @@
 import nav from '../assets/nav.jpg';
-import bgImage from '../assets/react.svg';
 import { HiArrowRight } from "react-icons/hi";
 
 export default function Footer1() {

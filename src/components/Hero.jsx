@@ -1,4 +1,4 @@
-import HeroImg from '../assets/hero.png';
+const HeroImg = 'https://placehold.co/400x400?text=Hero';
 import { AiOutlineTwitter,AiOutlineFacebook,AiOutlineLinkedin } from "react-icons/ai";
 
 

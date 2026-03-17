@@ -1,6 +1,6 @@
-import websiteImg1 from '../assets/ecommerce-websites.jpg'
-import websiteImg2 from '../assets/food-ecommerce.jpg' 
-import websiteImg3 from '../assets/website-blog.jpg'
+const websiteImg1 = 'https://placehold.co/500x300?text=Project+1';
+const websiteImg2 = 'https://placehold.co/500x300?text=Project+2';
+const websiteImg3 = 'https://placehold.co/500x300?text=Project+3';
 
 export default function Projects(){
 
