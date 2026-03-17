@@ -60,7 +60,7 @@ export default function AboutAutism() {
         </motion.div>
 
         <motion.div 
-          className="overflow-x-auto rounded-xl shadow-2xl border border-gray-100"
+          className="overflow-x-auto rounded-xl shadow-2xl border border-gray-100 -mx-4 md:mx-0"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -68,10 +68,10 @@ export default function AboutAutism() {
         >
           <table className="w-full text-left border-collapse bg-white">
             <thead>
-              <tr className="bg-[#cfe2f3] text-[#113240] uppercase text-sm font-bold tracking-wider">
-                <th className="px-8 py-6 border-b border-gray-200">Year</th>
-                <th className="px-8 py-6 border-b border-gray-200">Technology Development</th>
-                <th className="px-8 py-6 border-b border-gray-200">Rate of Autism</th>
+              <tr className="bg-[#cfe2f3] text-[#113240] uppercase text-xs md:text-sm font-bold tracking-wider">
+                <th className="px-4 md:px-8 py-4 md:py-6 border-b border-gray-200">Year</th>
+                <th className="px-4 md:px-8 py-4 md:py-6 border-b border-gray-200">Technology Development</th>
+                <th className="px-4 md:px-8 py-4 md:py-6 border-b border-gray-200">Rate of Autism</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-100">
@@ -84,9 +84,9 @@ export default function AboutAutism() {
                   transition={{ duration: 0.4, delay: index * 0.05 }}
                   viewport={{ once: true }}
                 >
-                  <td className="px-8 py-5 font-bold">{item.year}</td>
-                  <td className="px-8 py-5 text-gray-700 italic">{item.tech || "-"}</td>
-                  <td className="px-8 py-5 font-semibold text-orange-600">{item.rate}</td>
+                  <td className="px-4 md:px-8 py-4 md:py-5 font-bold text-sm md:text-base">{item.year}</td>
+                  <td className="px-4 md:px-8 py-4 md:py-5 text-gray-700 italic text-sm md:text-base">{item.tech || "-"}</td>
+                  <td className="px-4 md:px-8 py-4 md:py-5 font-semibold text-orange-600 text-sm md:text-base whitespace-nowrap">{item.rate}</td>
                 </motion.tr>
               ))}
             </tbody>

@@ -15,7 +15,7 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
-      <div className="App">
+      <div className="App pt-[70px]">
         <Header1 />
         <Routes>
           <Route path="/" element={ <> <SpecialSection /> <ServicesSection /> <ClassesSection /> </> } />
