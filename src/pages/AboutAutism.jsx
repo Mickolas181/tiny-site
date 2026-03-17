@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import autismBg from '../assets/autism_hero_bg.jpg';
 
 // const autismData = ...
 const autismData = [
@@ -32,7 +33,7 @@ export default function AboutAutism() {
         {/* Background Image with Overlay */}
         <div 
           className="absolute inset-0 bg-cover bg-center opacity-40 brightness-50"
-          style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1594608661623-aa0bd3a69d98?q=80&w=2000")' }}
+          style={{ backgroundImage: `url(${autismBg})` }}
         ></div>
         
         <motion.div 

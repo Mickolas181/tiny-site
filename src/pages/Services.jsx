@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';  
 import { motion } from 'framer-motion';
-// Unga hero background image-ah inga import pannikonga
-// import servicesBg from '../assets/services-bg.jpg'; 
+import servicesBg from '../assets/services_hero_bg.jpg'; 
 
 export default function Services() {
 
@@ -12,8 +11,7 @@ export default function Services() {
       {/* --- Hero Banner Section --- */}
       <div 
         className="relative w-full h-[300px] md:h-[400px] bg-cover bg-center flex flex-col justify-center items-center text-white"
-        // style={{ backgroundImage: `url(${servicesBg})` }} // Image add panna idha uncomment pannunga
-        style={{ backgroundColor: '#4a5568' }} // Image illana indha dummy color theriyum
+        style={{ backgroundImage: `url(${servicesBg})` }}
       >
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>

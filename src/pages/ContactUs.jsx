@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-// import contactBg from '../assets/contact-bg.jpg'; 
+import contactBg from '../assets/contact_hero_bg.jpg'; 
 
 export default function ContactUs() {
 
@@ -191,7 +191,7 @@ export default function ContactUs() {
       {/* --- Hero Banner Section --- */}
       <div 
         className="relative w-full h-[300px] md:h-[400px] bg-cover bg-center flex flex-col justify-center items-center text-white"
-        style={{ backgroundColor: '#4a5568' }} // Background image add panna mathikonga
+        style={{ backgroundImage: `url(${contactBg})` }}  
       >
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         <motion.div 

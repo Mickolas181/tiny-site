@@ -1,9 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-
-// Unga background image-ah inga import pannikonga (hero section-kaga)
-// import aboutBg from '../assets/about-bg.jpg'; 
+import aboutBg from '../assets/about_hero_bg.jpg';
 
 export default function AboutUs() {
 
@@ -14,8 +12,7 @@ export default function AboutUs() {
       {/* --- Hero Banner Section --- */}
       <div 
         className="relative w-full h-[300px] md:h-[400px] bg-cover bg-center flex flex-col justify-center items-center text-white"
-        // style={{ backgroundImage: `url(${aboutBg})` }} // Image add panna idha uncomment pannunga
-        style={{ backgroundColor: '#4a5568' }} // Image illana indha dummy color theriyum
+        style={{ backgroundImage: `url(${aboutBg})` }}
       >
         {/* Dark Overlay (text theliva theriya) */}
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
