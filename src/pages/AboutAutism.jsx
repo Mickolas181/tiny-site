@@ -28,8 +28,8 @@ export default function AboutAutism() {
     <div className="bg-white min-h-screen font-sans">
       <div className="relative h-[300px] md:h-[400px] bg-gray-800 flex items-center justify-center text-white overflow-hidden">
         <div 
-          className="absolute inset-0 bg-cover bg-center opacity-40 brightness-50"
-          style={{ backgroundImage: `url(${autismBg})` }}
+          className="absolute inset-0 bg-cover bg-center opacity-60 brightness-75"
+          style={{ backgroundImage: `url("${autismBg}")` }}
         ></div>
         
         <motion.div 

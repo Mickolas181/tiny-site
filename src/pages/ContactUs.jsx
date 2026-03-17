@@ -186,9 +186,9 @@ export default function ContactUs() {
     <div className="font-sans bg-gray-50 min-h-screen overflow-hidden">
       <div 
         className="relative w-full h-[300px] md:h-[400px] bg-cover bg-center flex flex-col justify-center items-center text-white"
-        style={{ backgroundImage: `url(${contactBg})` }}  
+        style={{ backgroundImage: `url("${contactBg}")` }}  
       >
-        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div className="absolute inset-0 bg-black/40"></div>
         <motion.div 
           className="relative z-10 text-center px-4"
           initial={{ opacity: 0 }}
