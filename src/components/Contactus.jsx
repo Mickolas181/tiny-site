@@ -17,8 +17,8 @@ export default function ClassesSection() {
 
         <motion.div
           className="text-center mb-12"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true, amount: 0.3 }}
         >
@@ -32,8 +32,8 @@ export default function ClassesSection() {
             <motion.div
               key={classItem.id}
               className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
               viewport={{ once: true, amount: 0.3 }}
             >

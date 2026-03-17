@@ -50,8 +50,8 @@ export default function AboutAutism() {
       <div className="max-w-7xl mx-auto px-4 py-20">
         <motion.div 
           className="mb-12"
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true, amount: 0.3 }}
         >
@@ -61,8 +61,8 @@ export default function AboutAutism() {
 
         <motion.div 
           className="overflow-x-auto rounded-xl shadow-2xl border border-gray-100"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true, amount: 0.1 }}
         >
@@ -79,8 +79,8 @@ export default function AboutAutism() {
                 <motion.tr 
                   key={index} 
                   className="hover:bg-blue-50/50 transition-colors text-[#113240]"
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
                   transition={{ duration: 0.4, delay: index * 0.05 }}
                   viewport={{ once: true }}
                 >

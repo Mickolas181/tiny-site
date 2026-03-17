@@ -13,8 +13,8 @@ export default function SpecialSection() {
     <section className='flex flex-wrap items-center gap-16 px-24 py-20 bg-white overflow-hidden'>
       <motion.div
         className='flex-1 min-w-[300px] max-w-xl'
-        initial={{ opacity: 0, x: -50 }}
-        whileInView={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true, amount: 0.3 }}
       >
@@ -29,8 +29,8 @@ export default function SpecialSection() {
 
       <motion.div
         className='flex-1 min-w-[280px] relative flex justify-center'
-        initial={{ opacity: 0, x: 50 }}
-        whileInView={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.2 }}
         viewport={{ once: true, amount: 0.3 }}
       >

@@ -22,8 +22,8 @@ export default function ServicesSection() {
 
         <motion.div
           className="text-center mb-12"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true, amount: 0.3 }}
         >
@@ -36,8 +36,8 @@ export default function ServicesSection() {
             <motion.div
               key={index}
               className={item.bg + " rounded-3xl p-8 text-center"}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
               viewport={{ once: true, amount: 0.3 }}
             >
@@ -62,8 +62,8 @@ export default function ServicesSection() {
               <motion.div
                 key={stat.id}
                 className="text-center flex flex-col items-center"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true, amount: 0.3 }}
               >

@@ -14,8 +14,8 @@ export default function AboutUs() {
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         <motion.div
           className="relative z-10 text-center px-4"
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-5xl md:text-7xl font-bold mb-4 tracking-tight drop-shadow-lg">About Us</h1>
@@ -30,8 +30,8 @@ export default function AboutUs() {
       <div className="max-w-5xl mx-auto px-4 py-16 text-gray-700 leading-relaxed space-y-16">
 
         <motion.section
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true, amount: 0.2 }}
         >
@@ -44,8 +44,8 @@ export default function AboutUs() {
         </motion.section>
 
         <motion.section
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true, amount: 0.1 }}
         >
@@ -69,8 +69,8 @@ export default function AboutUs() {
         </motion.section>
 
         <motion.section
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true, amount: 0.2 }}
         >
@@ -83,8 +83,8 @@ export default function AboutUs() {
         </motion.section>
 
         <motion.section
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true, amount: 0.2 }}
         >

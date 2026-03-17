@@ -191,8 +191,8 @@ export default function ContactUs() {
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         <motion.div 
           className="relative z-10 text-center px-4"
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-5xl md:text-7xl font-bold mb-4 tracking-tight drop-shadow-lg">Contact Us</h1>
@@ -210,8 +210,8 @@ export default function ContactUs() {
             <motion.div 
               key={index} 
               className="flex flex-col"
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
               viewport={{ once: true, amount: 0.2 }}
             >
@@ -231,12 +231,27 @@ export default function ContactUs() {
                     <p><span className="font-semibold text-gray-800">Timing :</span> {loc.timing}</p>
                     <p><span className="font-semibold text-gray-800">Phone :</span> {loc.phone}</p>
                   </div>
+                  <div className="pl-11 pt-2">
+                    <a 
+                      href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(loc.title + " " + loc.address)}`} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-[#fe5d44] font-bold hover:underline"
+                    >
+                      Open in Google Maps →
+                    </a>
+                  </div>
                 </div>
-                <div className="w-full md:w-48 h-32 bg-blue-50 rounded-xl border border-blue-100 flex items-center justify-center overflow-hidden">
-                   <div className="text-center">
-                      <span className="text-2xl">🗺️</span>
-                      <p className="text-xs text-blue-500 font-medium mt-1">View on Map</p>
-                   </div>
+                <div className="w-full md:w-64 h-48 bg-blue-50 rounded-xl border border-blue-100 overflow-hidden shadow-inner">
+                   <iframe 
+                     title={loc.area}
+                     width="100%" 
+                     height="100%" 
+                     frameBorder="0" 
+                     style={{ border: 0 }}
+                     src={`https://maps.google.com/maps?q=${encodeURIComponent(loc.title + " " + loc.address)}&t=&z=15&ie=UTF8&iwloc=&output=embed`} 
+                     allowFullScreen
+                   ></iframe>
                 </div>
               </div>
             </motion.div>
