@@ -17,8 +17,8 @@ export default function Services() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-5xl md:text-7xl font-bold mb-4 tracking-tight drop-shadow-lg">Services</h1>
-          <nav className="flex items-center justify-center gap-2 text-lg font-semibold bg-white/10 backdrop-blur-sm px-6 py-2 rounded-full mx-auto w-fit border border-white/20">
+          <h1 className="text-4xl md:text-7xl font-bold mb-4 tracking-tight drop-shadow-lg text-center">Services</h1>
+          <nav className="flex items-center justify-center gap-2 text-base md:text-lg font-semibold bg-white/10 backdrop-blur-sm px-4 md:px-6 py-2 rounded-full mx-auto w-fit border border-white/20">
             <Link to="/" className="text-orange-400 hover:text-orange-300 transition-colors">Home</Link>
             <span className="text-gray-400">/</span>
             <span className="text-white">Services</span>  
@@ -59,9 +59,9 @@ export default function Services() {
           </motion.div>
         </div>
 
-        <div className="ml-4 md:ml-10">
+        <div className="ml-0 md:ml-10">
           <motion.h2 
-            className="text-2xl font-bold text-[#fe5d44] mb-8"
+            className="text-2xl font-bold text-[#fe5d44] mb-8 text-center md:text-left"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.8 }}

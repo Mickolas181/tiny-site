@@ -195,8 +195,8 @@ export default function ContactUs() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-5xl md:text-7xl font-bold mb-4 tracking-tight drop-shadow-lg">Contact Us</h1>
-          <nav className="flex items-center justify-center gap-2 text-lg font-semibold bg-white/10 backdrop-blur-sm px-6 py-2 rounded-full mx-auto w-fit border border-white/20">
+          <h1 className="text-4xl md:text-7xl font-bold mb-4 tracking-tight drop-shadow-lg text-center">Contact Us</h1>
+          <nav className="flex items-center justify-center gap-2 text-base md:text-lg font-semibold bg-white/10 backdrop-blur-sm px-4 md:px-6 py-2 rounded-full mx-auto w-fit border border-white/20">
             <Link to="/" className="text-orange-400 hover:text-orange-300 transition-colors">Home</Link>
             <span className="text-gray-400">/</span>
             <span className="text-white">Contact Us</span>  
@@ -215,8 +215,8 @@ export default function ContactUs() {
               transition={{ duration: 0.5 }}
               viewport={{ once: true, amount: 0.2 }}
             >
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">{loc.area}</h2>
-              <div className="flex flex-col md:flex-row gap-6 bg-white p-6 rounded-2xl shadow-sm border border-gray-100 h-full">
+              <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 md:mb-6">{loc.area}</h2>
+              <div className="flex flex-col xl:flex-row gap-6 bg-white p-5 md:p-6 rounded-2xl shadow-sm border border-gray-100 h-full">
                 <div className="flex-1 space-y-3">
                   <div className="flex items-start gap-3">
                     <div className="mt-1 w-8 h-8 rounded-full bg-orange-100 text-[#fe5d44] flex items-center justify-center font-bold">

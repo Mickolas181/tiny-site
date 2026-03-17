@@ -38,8 +38,8 @@ export default function AboutAutism() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-5xl md:text-7xl font-bold mb-4 tracking-tight drop-shadow-lg">About Autism</h1>
-          <nav className="flex items-center justify-center gap-2 text-lg font-semibold bg-white/10 backdrop-blur-sm px-6 py-2 rounded-full mx-auto w-fit border border-white/20">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 tracking-tight text-center">About Autism</h1>
+          <nav className="flex items-center justify-center gap-2 text-base md:text-lg font-semibold bg-white/10 backdrop-blur-sm px-4 md:px-6 py-2 rounded-full mx-auto w-fit border border-white/20">
             <Link to="/" className="text-orange-400 hover:text-orange-300 transition-colors">Home</Link>
             <span className="text-gray-400">/</span>
             <span className="text-white">About Autism</span>
@@ -49,14 +49,14 @@ export default function AboutAutism() {
 
       <div className="max-w-7xl mx-auto px-4 py-20">
         <motion.div 
-          className="mb-12"
+          className="mb-8 md:mb-12 px-2"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true, amount: 0.3 }}
         >
-          <h2 className="text-4xl font-bold text-[#fe5d44] mb-3">About Autism</h2>
-          <p className="text-gray-600 font-medium tracking-wide">Our Understanding About Autism</p>
+          <h2 className="text-2xl md:text-3xl font-bold text-[#113240] mb-4">India Autism Statistics</h2>
+          <p className="text-gray-600">The prevalence of autism in India has been increasing significantly over the years.</p>
         </motion.div>
 
         <motion.div 

@@ -27,8 +27,8 @@ export default function ServicesSection() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true, amount: 0.3 }}
         >
-          <p className="text-orange-500 text-sm font-bold uppercase tracking-wide">Service We Provide</p>
-          <h2 className="text-4xl font-bold text-gray-900">Providing Good Qualities</h2>
+          <p className="text-orange-500 text-xs md:text-sm font-bold uppercase tracking-wide">Service We Provide</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Providing Good Qualities</h2>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -48,16 +48,16 @@ export default function ServicesSection() {
         </div>
 
         <motion.div
-          className="mt-20 bg-[#e4f0f8] rounded-3xl py-12 px-6"
+          className="mt-16 md:mt-20 bg-[#e4f0f8] rounded-3xl py-10 md:py-12 px-4 md:px-6"
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true, amount: 0.3 }}
         >
           <div className="text-center mb-10">
-            <h2 className="text-4xl font-semibold text-[#fe5d44]">Stats</h2>
+            <h2 className="text-3xl md:text-4xl font-semibold text-[#fe5d44]">Stats</h2>
           </div>
-          <div className="flex flex-col md:flex-row justify-around items-center gap-10">
+          <div className="grid grid-cols-2 md:flex md:flex-row justify-around items-center gap-6 md:gap-10">
             {statsData.map((stat, index) => (
               <motion.div
                 key={stat.id}
@@ -67,10 +67,10 @@ export default function ServicesSection() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true, amount: 0.3 }}
               >
-                <h3 className="text-5xl md:text-6xl font-extrabold text-[#113240] mb-2 tracking-tight">
+                <h3 className="text-4xl md:text-6xl font-extrabold text-[#113240] mb-2 tracking-tight">
                   <CountUp start={0} end={stat.number} duration={3} enableScrollSpy scrollSpyOnce />
                 </h3>
-                <p className="text-lg font-bold text-[#113240]">{stat.label}</p>
+                <p className="text-sm md:text-lg font-bold text-[#113240]">{stat.label}</p>
               </motion.div>
             ))}
           </div>

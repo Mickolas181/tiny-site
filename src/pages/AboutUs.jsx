@@ -18,8 +18,8 @@ export default function AboutUs() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-5xl md:text-7xl font-bold mb-4 tracking-tight drop-shadow-lg">About Us</h1>
-          <nav className="flex items-center justify-center gap-2 text-lg font-semibold bg-white/10 backdrop-blur-sm px-6 py-2 rounded-full mx-auto w-fit border border-white/20">
+          <h1 className="text-4xl md:text-7xl font-bold mb-4 tracking-tight drop-shadow-lg text-center">About Us</h1>
+          <nav className="flex items-center justify-center gap-2 text-base md:text-lg font-semibold bg-white/10 backdrop-blur-sm px-4 md:px-6 py-2 rounded-full mx-auto w-fit border border-white/20">
             <Link to="/" className="text-orange-400 hover:text-orange-300 transition-colors">Home</Link>
             <span className="text-gray-400">/</span>
             <span className="text-white">About Us</span>
@@ -27,7 +27,7 @@ export default function AboutUs() {
         </motion.div>
       </div>
 
-      <div className="max-w-5xl mx-auto px-4 py-16 text-gray-700 leading-relaxed space-y-16">
+      <div className="max-w-5xl mx-auto px-6 md:px-4 py-12 md:py-16 text-gray-700 leading-relaxed space-y-12 md:space-y-16">
 
         <motion.section
           initial={{ opacity: 0 }}

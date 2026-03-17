@@ -22,9 +22,9 @@ export default function ClassesSection() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true, amount: 0.3 }}
         >
-          <p className="text-orange-500 text-sm font-bold uppercase tracking-wide">On Going Branches</p>
-          <h2 className="text-4xl font-bold text-gray-900 mb-2">Take The Classes & Start</h2>
-          <h3 className="text-2xl font-semibold text-gray-700">Learning From Today</h3>
+          <p className="text-orange-500 text-xs md:text-sm font-bold uppercase tracking-wide">On Going Branches</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">Take The Classes & Start</h2>
+          <h3 className="text-xl md:text-2xl font-semibold text-gray-700">Learning From Today</h3>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -53,10 +53,10 @@ export default function ClassesSection() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true, amount: 0.3 }}
         >
-          <p className="text-orange-500 text-sm font-bold uppercase tracking-wide">Join Our New Session</p>
-          <h2 className="text-4xl font-bold text-gray-900 mb-2">Call To Enroll Your Child</h2>
-          <p className="text-3xl font-bold text-gray-900 mb-2">+91 99413 50646</p>
-          <p className="text-3xl font-bold text-gray-900">+91 72995 35600</p>
+          <p className="text-orange-500 text-xs md:text-sm font-bold uppercase tracking-wide">Join Our New Session</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 px-2">Call To Enroll Your Child</h2>
+          <p className="text-2xl md:text-3xl font-bold text-[#113240] mb-2 tracking-tight">+91 99413 50646</p>
+          <p className="text-2xl md:text-3xl font-bold text-[#113240] tracking-tight">+91 72995 35600</p>
         </motion.div>
 
       </div>
