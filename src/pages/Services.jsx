@@ -4,18 +4,13 @@ import { motion } from 'framer-motion';
 import servicesBg from '../assets/services_hero_bg.jpg'; 
 
 export default function Services() {
-
-    return (
+  return (
     <div className="font-sans overflow-hidden">
-      
-      {/* --- Hero Banner Section --- */}
       <div 
         className="relative w-full h-[300px] md:h-[400px] bg-cover bg-center flex flex-col justify-center items-center text-white"
         style={{ backgroundImage: `url(${servicesBg})` }}
       >
-        {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-          
         <motion.div 
           className="relative z-10 text-center px-4"
           initial={{ opacity: 0, y: -50 }}
@@ -31,13 +26,8 @@ export default function Services() {
         </motion.div>
       </div>
 
-      {/* --- Main Content Section --- */}
       <div className="max-w-6xl mx-auto px-4 py-16 text-gray-700">
-        
-        {/* Top Two Columns: Our Services & Used Methods */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16 ml-4 md:ml-10">
-          
-          {/* Our Services */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -53,7 +43,6 @@ export default function Services() {
             </ul>
           </motion.div>
 
-          {/* Used Methods */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -65,13 +54,11 @@ export default function Services() {
               <li>Inclusion</li>
               <li>Mainstreaming</li>
               <li>Exclusion</li>
-              <li>Segreation</li>
+              <li>Segregation</li>
             </ul>
           </motion.div>
-          
         </div>
 
-        {/* Common Special Needs Section */}
         <div className="ml-4 md:ml-10">
           <motion.h2 
             className="text-2xl font-bold text-[#fe5d44] mb-8"
@@ -84,8 +71,6 @@ export default function Services() {
           </motion.h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-12">
-            
-            {/* Neurodevelopmental */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -102,7 +87,6 @@ export default function Services() {
               </ul>
             </motion.div>
 
-            {/* Sensory Integration */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -110,7 +94,7 @@ export default function Services() {
               viewport={{ once: true, amount: 0.3 }}
             >
               <h3 className="text-lg font-bold text-gray-800 mb-4 uppercase">SENSORY INTEGRATION THERAPY:</h3>
-              <ul className="list-disc list-inside space-y-2 text-gray-600">
+              <ul className="list-disc list-inside space-y-2 text-gray-600 text-sm md:text-base leading-relaxed">
                 <li>Fear of Height (gravitational insecurity)</li>
                 <li>Aversion to touch eg., refuse to hair cut and nail cut, refuse to wear certain textured cloth, avoid Sticky things, feel irritable while walking in grass with bare foot.</li>
                 <li>Difficulty in concentrate an activity.</li>
@@ -122,7 +106,6 @@ export default function Services() {
               </ul>
             </motion.div>
 
-            {/* Hand Writing */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -139,7 +122,6 @@ export default function Services() {
               </ul>
             </motion.div>
 
-            {/* Cognitive Function */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -154,10 +136,8 @@ export default function Services() {
                 <li>Poor Judgement</li>
               </ul>
             </motion.div>
-
           </div>
         </div>
-
       </div>
     </div>
   );

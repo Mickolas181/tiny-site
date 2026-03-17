@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Header1 from './components/Header1.jsx'
-import Top from './components/Top.jsx'
 import Footer1 from './components/Footer1.jsx'
 import Footer2 from './components/Footer2.jsx'
 import ClassesSection from './components/Contactus.jsx'
@@ -15,15 +14,15 @@ import ScrollToTop from './pages/ScrollToTop.jsx'
 function App() {
   return (
     <Router>
-      <ScrollToTop /> 
+      <ScrollToTop />
       <div className="App">
         <Header1 />
         <Routes>
-          <Route path="/" element={ <> <SpecialSection />  <ServicesSection /> <ClassesSection /> </> } />
+          <Route path="/" element={ <> <SpecialSection /> <ServicesSection /> <ClassesSection /> </> } />
           <Route path="/about-autism" element={<AboutAutism />} />
-          <Route path="/about" element={<AboutUs />} /> 
+          <Route path="/about" element={<AboutUs />} />
           <Route path="/services" element={<Services />} />
-          <Route path="/contact" element={<ContactUs />} /> 
+          <Route path="/contact" element={<ContactUs />} />
         </Routes>
         <Footer1 />
         <Footer2 />

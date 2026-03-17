@@ -10,11 +10,10 @@ const config = {
 
 export default function SpecialSection() {
   return (
-    <section className='flex flex-wrap items-center gap-16 px-24 py-50 bg-white overflow-hidden'>
-      {/* Text Section Animation Wrapper */}
-      <motion.div 
+    <section className='flex flex-wrap items-center gap-16 px-24 py-20 bg-white overflow-hidden'>
+      <motion.div
         className='flex-1 min-w-[300px] max-w-xl'
-        initial={{ opacity: 0, x: -50 }} // Left la irunthu varum
+        initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true, amount: 0.3 }}
@@ -28,28 +27,24 @@ export default function SpecialSection() {
         </button>
       </motion.div>
 
-      {/* Image Section Animation Wrapper */}
-      <motion.div 
+      <motion.div
         className='flex-1 min-w-[280px] relative flex justify-center'
-        initial={{ opacity: 0, x: 50 }} // Right la irunthu varum
+        initial={{ opacity: 0, x: 50 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
         viewport={{ once: true, amount: 0.3 }}
       >
-        <div className='w-80 h-80 overflow-hidden shadow-2xl' style={{borderRadius:'60% 40% 55% 45%/50% 60% 40% 50%'}}>
+        <div className='w-80 h-80 overflow-hidden shadow-2xl' style={{ borderRadius: '60% 40% 55% 45%/50% 60% 40% 50%' }}>
           <img src={AboutImg} alt="Therapy" className='w-full h-full object-cover' />
         </div>
-        <div className='absolute w-96 h-96 border-4 border-orange-400 opacity-30 top-[-15px]' style={{borderRadius:'60% 40% 55% 45%/50% 60% 40% 50%'}} />
-        
-        {/* Adhiga animation thevai na Star ku idhol pol tharalam */}
-        <motion.span 
+        <div className='absolute w-96 h-96 border-4 border-orange-400 opacity-30 top-[-15px]' style={{ borderRadius: '60% 40% 55% 45%/50% 60% 40% 50%' }} />
+        <motion.span
           className='absolute bottom-2 right-2 text-3xl'
           animate={{ rotate: 360 }}
           transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
         >
           ⭐
         </motion.span>
-
       </motion.div>
     </section>
   );

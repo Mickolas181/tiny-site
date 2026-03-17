@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import autismBg from '../assets/autism_hero_bg.jpg';
 
-// const autismData = ...
 const autismData = [
   { year: '1970', tech: '', rate: '1 in 10,000 children' },
   { year: '1971', tech: 'Colour TV common in USA', rate: '1 in 5000 children' },
@@ -25,12 +24,9 @@ const autismData = [
 ];
 
 export default function AboutAutism() {
-  
-  return (  
-    <div className="bg-white min-h-screen">
-      {/* --- Hero Section --- */}
+  return (
+    <div className="bg-white min-h-screen font-sans">
       <div className="relative h-[300px] md:h-[400px] bg-gray-800 flex items-center justify-center text-white overflow-hidden">
-        {/* Background Image with Overlay */}
         <div 
           className="absolute inset-0 bg-cover bg-center opacity-40 brightness-50"
           style={{ backgroundImage: `url(${autismBg})` }}
@@ -51,7 +47,6 @@ export default function AboutAutism() {
         </motion.div>
       </div>
 
-      {/* --- Content Section --- */}
       <div className="max-w-7xl mx-auto px-4 py-20">
         <motion.div 
           className="mb-12"
@@ -64,7 +59,6 @@ export default function AboutAutism() {
           <p className="text-gray-600 font-medium tracking-wide">Our Understanding About Autism</p>
         </motion.div>
 
-        {/* --- Data Table --- */}
         <motion.div 
           className="overflow-x-auto rounded-xl shadow-2xl border border-gray-100"
           initial={{ opacity: 0, y: 30 }}
