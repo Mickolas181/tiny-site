@@ -17,7 +17,6 @@ function App() {
     <Router>
       <ScrollToTop /> 
       <div className="App">
-        <Top />
         <Header1 />
         <Routes>
           <Route path="/" element={ <> <SpecialSection />  <ServicesSection /> <ClassesSection /> </> } />
