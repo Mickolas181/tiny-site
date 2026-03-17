@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
-  
 // Unga background image-ah inga import pannikonga (hero section-kaga)
 // import aboutBg from '../assets/about-bg.jpg'; 
 
@@ -9,7 +9,7 @@ export default function AboutUs() {
 
   
   return (
-    <div className="font-sans">
+    <div className="font-sans overflow-hidden">
       
       {/* --- Hero Banner Section --- */}
       <div 
@@ -20,21 +20,31 @@ export default function AboutUs() {
         {/* Dark Overlay (text theliva theriya) */}
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         
-        <div className="relative z-10 text-center px-4">
+        <motion.div 
+          className="relative z-10 text-center px-4"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
           <h1 className="text-5xl md:text-7xl font-bold mb-4 tracking-tight drop-shadow-lg">About Us</h1>
           <nav className="flex items-center justify-center gap-2 text-lg font-semibold bg-white/10 backdrop-blur-sm px-6 py-2 rounded-full mx-auto w-fit border border-white/20">
             <Link to="/" className="text-orange-400 hover:text-orange-300 transition-colors">Home</Link>
             <span className="text-gray-400">/</span>
             <span className="text-white">About Us</span>  
           </nav>          
-        </div>
+        </motion.div>
       </div>
 
       {/* --- Main Content Section --- */}
-      <div className="max-w-5xl mx-auto px-4 py-16 text-gray-700 leading-relaxed space-y-10">
+      <div className="max-w-5xl mx-auto px-4 py-16 text-gray-700 leading-relaxed space-y-16">
         
         {/* About the Clinic */}
-        <section>
+        <motion.section
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true, amount: 0.2 }}
+        >
           <h2 className="text-2xl font-bold text-[#fe5d44] mb-4">About the Clinic</h2>
           <div className="space-y-4 text-justify">
             <p>
@@ -47,10 +57,15 @@ export default function AboutUs() {
               Tiny Todds Therapy Care is well known among parents of special children for its quality care and richness in knowledge. It also provides developmental screening for children from 0-3 years, which helps in early detection of autism, ADHD, and cerebral palsy and mental retardation.
             </p>
           </div>
-        </section>
+        </motion.section>
 
         {/* About Our Program */}
-        <section>
+        <motion.section
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true, amount: 0.1 }}
+        >
           <h2 className="text-2xl font-bold text-[#fe5d44] mb-4">About Our Program</h2>
           <div className="space-y-4 text-justify">
             <p>
@@ -85,10 +100,15 @@ export default function AboutUs() {
               Our unique method of teaching skills helps to improve their IQ at higher level when compare to their age. Many children doing maths of higher standard with ease. One of the leading Psychologist rang me and asked “what are you doing in your centre, all the children from your centre have higher IQ which I have not noticed in children going to other centre. Which gave me a spark of starting Sharp Brain-IQ- Booster program for normal children.
             </p>
           </div>
-        </section>
+        </motion.section>
 
         {/* Sharp Brain - Toddlers */}
-        <section>
+        <motion.section
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true, amount: 0.2 }}
+        >
           <h2 className="text-xl font-bold text-[#fe5d44] mb-2 uppercase">SHARP BRAIN –IQ BOOSTER PROGRAM -TODDLERS</h2>
           <p className="font-semibold text-gray-600 mb-4">(1.5 year to 3 Years)</p>
           <div className="space-y-4 text-justify">
@@ -99,29 +119,39 @@ export default function AboutUs() {
               This is an alternate for playschool, where we take children with age group between 1.5 to 3.5 years. These children will be screened for autism and other developmental disabilities. They are allowed to play with their peers for the early speech development and social interaction etc. We also provide developmental milestones bases training for each kid with individual care. We create a track record of their development and monitor the progress. If any child undergoes this program definitely they will not get affected by autism for sure and also this program gives an early start to the children. So that the children DQ will be higher than of other children. These children started to read, write, comprehend and doing addition and subtraction before they go to school.
             </p>
           </div>
-        </section>
+        </motion.section>
 
         {/* Sharp Brain - Primary */}
-        <section>
+        <motion.section
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true, amount: 0.2 }}
+        >
           <h2 className="text-xl font-bold text-[#fe5d44] mb-2 uppercase">SHARP BRAIN –IQ BOOSTER PROGRAM –PRIMARY</h2>
           <p className="font-semibold text-gray-600 mb-4">(3.5 to 8 years)</p>
           <p className="text-justify">
             This program is developed for slow learners. This program helps the student to learn reading, writing, comprehension and doing math problems with easy techniques and step by step training help them to learn the subject at great speed. We can see changes usually within 6 months, and to attain the full benefits of this program, children should continue this program for 3 years. No child is a dull child. Any child can perform better if the training is good.
           </p>
-        </section>
+        </motion.section>
 
         {/* Speciality */}
-        <section>
+        <motion.section
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true, amount: 0.2 }}
+        >
           <h2 className="text-2xl font-bold text-[#fe5d44] mb-4">Speciality</h2>
           <div className="space-y-4 text-justify">
             <p>
               The specialty of the centre is, it has different methods of treating and educating the special children depending upon the category. All the programs are scientifically formulated so that the children are not only taken care of with mother’s love but also, they gradually attain betterment in terms of learning and doing things on their home.
             </p>
-            <p className="font-semibold text-gray-800 border-l-4 border-[#fe5d44] pl-4 italic">
+            <p className="font-semibold text-gray-800 border-l-4 border-[#fe5d44] pl-4 italic bg-orange-50 p-4 rounded-r-lg">
               Admitting your children at Tiny Todds Therapy Centre means offering them a somewhat better future on par with other children.
             </p>
           </div>
-        </section>
+        </motion.section>
 
       </div>
     </div>
