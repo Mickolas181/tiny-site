@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { HiMenu, HiX } from 'react-icons/hi';
-import nav from '../assets/nav.jpg';
+import logo from '../assets/tttclogo.jpg';
 
 export default function Header1() {
   const [show, setShow] = useState(true);
@@ -40,7 +40,7 @@ export default function Header1() {
       }`}
     >
       <Link to="/" className='h-[40px] md:h-[50px] flex items-center'>
-        <img className="h-full" src={nav} alt="logo" />
+        <img className="h-full" src={logo} alt="logo" />
       </Link>
 
       {/* Desktop Navigation */}

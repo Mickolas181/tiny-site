@@ -1,14 +1,14 @@
-import nav from '../assets/nav.jpg';
+import logo from '../assets/tttclogo.jpg';
 import { HiArrowRight } from "react-icons/hi";
 import { Link } from 'react-router-dom';
 
 export default function Footer1() {
   return (
-    <footer className="bg-gray-50 border-t border-gray-200 py-20">
+    <footer className=" border-t border-gray-200 py-20">
       <div className="max-w-7xl mx-auto px-6 md:px-10 flex flex-col md:flex-row flex-wrap gap-12 md:gap-20 text-center md:text-left">
         <div className="flex-1 min-w-[280px] flex flex-col items-center md:items-start">
           <Link to="/">
-            <img className="w-[180px] md:w-[200px] mb-6" src={nav} alt="Logo" />
+            <img className="w-[180px] md:w-[200px] mb-6" src={logo} alt="Logo" />
           </Link>
           <p className="text-gray-600 leading-relaxed max-w-sm">
             The society today has to face lots of health challenges. Some of the physical and mental disorders which were very rare in the olden times have started occurring and spreading fast as an epidemic.
