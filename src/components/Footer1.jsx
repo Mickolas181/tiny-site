@@ -1,8 +1,16 @@
 import logo from '../assets/tttclogo.jpg';
 import { HiArrowRight } from "react-icons/hi";
+import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 
 export default function Footer1() {
+  const socialLinks = [
+    { icon: <FaFacebookF />, label: 'Facebook' },
+    { icon: <FaInstagram />, label: 'Instagram' },
+    { icon: <FaTwitter />, label: 'Twitter' },
+    { icon: <FaYoutube />, label: 'YouTube' },
+  ];
+
   return (
     <footer className="bg-[#0F3460] text-white py-16 border-t border-white/10">
       <div className="max-w-7xl mx-auto px-6 md:px-10 flex flex-col md:flex-row flex-wrap gap-12 md:gap-16 text-center md:text-left">
@@ -10,15 +18,15 @@ export default function Footer1() {
         {/* Brand */}
         <div className="flex-1 min-w-[280px] flex flex-col items-center md:items-start">
           <Link to="/">
-            <img className="w-[160px] md:w-[180px] mb-5 rounded-xl" src={logo} alt="Logo" />
+            <img className="w-[160px] md:w-[180px] mb-5 rounded-xl" src={logo} alt="Tiny Todds Therapy Care" />
           </Link>
           <p className="text-white/60 leading-relaxed max-w-sm text-sm">
             The society today has to face lots of health challenges. Tiny Todds is committed to providing holistic therapy care to every child in need across Tamil Nadu.
           </p>
           <div className="flex gap-3 mt-6">
-            {['📘', '📸', '🐦', '▶️'].map((icon, i) => (
-              <button key={i} className="w-9 h-9 rounded-full bg-white/10 hover:bg-[#00ADB5] flex items-center justify-center text-sm transition-all duration-300 hover:scale-110">
-                {icon}
+            {socialLinks.map((s, i) => (
+              <button key={i} aria-label={s.label} className="w-9 h-9 rounded-full bg-white/10 hover:bg-[#00ADB5] flex items-center justify-center text-sm transition-all duration-300 hover:scale-110 hover:shadow-[0_0_15px_rgba(0,173,181,0.3)]">
+                {s.icon}
               </button>
             ))}
           </div>

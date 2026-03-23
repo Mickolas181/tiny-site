@@ -1,1 +1,33 @@
 @import "tailwindcss";
+
+/* ── Design System Tokens ── */
+:root {
+  --color-primary: #0F3460;
+  --color-accent: #00ADB5;
+  --color-cta: #E94560;
+  --color-cta-dark: #B5223B;
+  --color-surface: #F8FAFC;
+  --color-text: #1E293B;
+  --color-text-muted: #64748B;
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.06);
+  --shadow-card-hover: 0 8px 40px rgba(0, 0, 0, 0.10);
+  --shadow-glow-cta: 0 8px 30px rgba(233, 69, 96, 0.25);
+}
+
+/* ── Base Styles ── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Selection ── */
+::selection {
+  background: #00ADB5;
+  color: white;
+}

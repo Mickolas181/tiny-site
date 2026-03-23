@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { FaPhone } from 'react-icons/fa';
 
 const facts = [
   'AUTISM AFFECTS 1 IN 40 CHILDREN',
@@ -14,7 +15,6 @@ export default function FloatingHUD() {
   const [factIdx, setFactIdx] = useState(0);
   const [open, setOpen] = useState(false);
 
-  // Live clock
   useEffect(() => {
     const tick = () => {
       const now = new Date();
@@ -27,13 +27,11 @@ export default function FloatingHUD() {
     return () => clearInterval(t);
   }, []);
 
-  // Cycle facts
   useEffect(() => {
     const t = setInterval(() => setFactIdx(i => (i + 1) % facts.length), 4000);
     return () => clearInterval(t);
   }, []);
 
-  // Check open hours (9am–7pm)
   useEffect(() => {
     const h = new Date().getHours();
     setOpen(h >= 9 && h < 19);
@@ -45,20 +43,20 @@ export default function FloatingHUD() {
 
         {/* Left: Cycling fact */}
         <motion.div
-          className="hidden md:flex flex-col items-start"
+          className="hidden md:flex flex-col items-start bg-white/5 backdrop-blur-sm rounded-lg px-3 py-2"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 2 }}
         >
           <div className="flex items-center gap-2 mb-1">
             <span className={`w-2 h-2 rounded-full ${open ? 'bg-green-400 animate-pulse' : 'bg-red-400'}`} />
-            <span className="text-[10px] font-bold text-white/60 uppercase tracking-widest">
+            <span className="text-[10px] font-semibold text-white/60 uppercase tracking-widest">
               {open ? 'OPEN NOW · 9AM–7PM' : 'CLOSED · OPENS 9AM'}
             </span>
           </div>
           <motion.p
             key={factIdx}
-            className="text-[10px] md:text-xs font-black text-white/40 uppercase tracking-widest max-w-[260px]"
+            className="text-[10px] md:text-xs font-bold text-white/40 uppercase tracking-widest max-w-[260px]"
             initial={{ opacity: 0, y: 6 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -6 }}
@@ -71,12 +69,12 @@ export default function FloatingHUD() {
         {/* Center: phone pill */}
         <motion.a
           href="tel:+919941350646"
-          className="pointer-events-auto bg-[#E94560] text-white text-xs font-black px-5 py-2 rounded-full shadow-lg hover:shadow-[#E94560]/40 hover:-translate-y-1 transition-all duration-300 mx-auto md:mx-0"
+          className="pointer-events-auto bg-gradient-to-r from-[#E94560] to-[#B5223B] text-white text-xs font-bold px-5 py-2.5 rounded-full shadow-lg hover:shadow-[0_8px_30px_rgba(233,69,96,0.35)] hover:-translate-y-1 transition-all duration-300 mx-auto md:mx-0 flex items-center gap-2"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 2.2 }}
         >
-          📞 +91 99413 50646
+          <FaPhone className="text-[10px]" /> +91 99413 50646
         </motion.a>
 
         {/* Right: Clock */}
@@ -86,7 +84,7 @@ export default function FloatingHUD() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 2 }}
         >
-          <p className="text-xl md:text-2xl font-black text-white/20 tabular-nums tracking-widest">
+          <p className="text-xl md:text-2xl font-black text-white/15 tabular-nums tracking-widest">
             {time}
           </p>
         </motion.div>

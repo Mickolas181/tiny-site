@@ -88,7 +88,7 @@ export default function ServicePage({ service }) {
         <div className="absolute inset-0 bg-[#0F3460]/70" />
         <motion.div className="relative z-10 text-center px-4" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.7 }}>
           <div className="text-5xl mb-3">{data.emoji}</div>
-          <h1 className="text-3xl md:text-5xl font-extrabold mb-3 drop-shadow-lg">{data.title}</h1>
+          <h1 className="text-4xl md:text-6xl font-extrabold mb-3 drop-shadow-lg tracking-tight">{data.title}</h1>
           <p className="text-white/80 text-base md:text-lg mb-4">{data.tagline}</p>
           <nav className="flex items-center justify-center gap-2 text-sm font-semibold bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mx-auto w-fit border border-white/20">
             <Link to="/" className="text-[#00ADB5] hover:text-white transition-colors">Home</Link>

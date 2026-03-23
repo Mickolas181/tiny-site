@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Header1 from './components/Header1.jsx'
 import Footer1 from './components/Footer1.jsx'
-import Footer2 from './components/Footer2.jsx'
 import ClassesSection from './components/Contactus.jsx'
 import ServicesSection from './components/Service.jsx'
 import SpecialSection from './components/SpecialSection.jsx'
@@ -44,7 +43,6 @@ function App() {
           <Route path="/contact" element={<ContactUs />} />
         </Routes>
         <Footer1 />
-        <Footer2 />
       </div>
     </Router>
   )

@@ -1,141 +1,127 @@
 import React from 'react';
 import { Link } from 'react-router-dom';  
 import { motion } from 'framer-motion';
+import { FaCheck, FaArrowRight } from 'react-icons/fa';
 import servicesBg from '../assets/services_hero_bg.jpg'; 
 
 export default function Services() {
   return (
-    <div className="font-sans overflow-hidden">
+    <div className="overflow-hidden">
       <div 
         className="relative w-full h-[300px] md:h-[400px] bg-cover bg-center flex flex-col justify-center items-center text-white"
         style={{ backgroundImage: `url("${servicesBg}")` }}
       >
-        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 bg-[#0F3460]/70"></div>
         <motion.div 
           className="relative z-10 text-center px-4"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
         >
-          <h1 className="text-4xl md:text-7xl font-bold mb-4 tracking-tight drop-shadow-lg text-center">Services</h1>
-          <nav className="flex items-center justify-center gap-2 text-base md:text-lg font-semibold bg-white/10 backdrop-blur-sm px-4 md:px-6 py-2 rounded-full mx-auto w-fit border border-white/20">
-            <Link to="/" className="text-orange-400 hover:text-orange-300 transition-colors">Home</Link>
-            <span className="text-gray-400">/</span>
+          <h1 className="text-4xl md:text-6xl font-extrabold mb-4 tracking-tight drop-shadow-lg">Services</h1>
+          <nav className="flex items-center justify-center gap-2 text-sm font-semibold bg-white/10 backdrop-blur-sm px-5 py-2 rounded-full mx-auto w-fit border border-white/20">
+            <Link to="/" className="text-[#00ADB5] hover:text-white transition-colors">Home</Link>
+            <span className="text-white/40">/</span>
             <span className="text-white">Services</span>  
           </nav>
         </motion.div>
       </div>
 
-      <div className="max-w-6xl mx-auto px-4 py-16 text-gray-700">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16 ml-4 md:ml-10">
+      <div className="max-w-6xl mx-auto px-4 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16">
           <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8 }}
+            className="bg-white rounded-2xl p-8 shadow-[0_4px_24px_rgba(0,0,0,0.06)] border border-slate-100"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
             viewport={{ once: true, amount: 0.3 }}
           >
-            <h2 className="text-2xl font-bold text-[#fe5d44] mb-6">Our Services</h2>
-            <ul className="space-y-3 text-gray-600 font-medium">
-              <li>Occupation Therapy</li>
-              <li>Speech Therapy</li>
-              <li>Physiotherapy</li>
-              <li>Special Education</li>
+            <h2 className="text-xl font-bold text-[#E94560] mb-5 flex items-center gap-2">
+              <span className="w-8 h-8 rounded-lg bg-[#E94560] flex items-center justify-center text-white text-xs"><FaCheck /></span>
+              Our Services
+            </h2>
+            <ul className="space-y-3">
+              {['Occupational Therapy', 'Speech Therapy', 'Physiotherapy', 'Special Education'].map((s, i) => (
+                <li key={i} className="flex items-center gap-3 text-slate-700 font-medium">
+                  <FaArrowRight className="text-[#00ADB5] text-xs flex-shrink-0" />
+                  {s}
+                </li>
+              ))}
             </ul>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            className="bg-white rounded-2xl p-8 shadow-[0_4px_24px_rgba(0,0,0,0.06)] border border-slate-100"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.15 }}
             viewport={{ once: true, amount: 0.3 }}
           >
-            <h2 className="text-2xl font-bold text-[#fe5d44] mb-6">Used Methods</h2>
-            <ul className="space-y-3 text-gray-600 font-medium">
-              <li>Inclusion</li>
-              <li>Mainstreaming</li>
-              <li>Exclusion</li>
-              <li>Segregation</li>
+            <h2 className="text-xl font-bold text-[#E94560] mb-5 flex items-center gap-2">
+              <span className="w-8 h-8 rounded-lg bg-[#E94560] flex items-center justify-center text-white text-xs"><FaCheck /></span>
+              Used Methods
+            </h2>
+            <ul className="space-y-3">
+              {['Inclusion', 'Mainstreaming', 'Exclusion', 'Segregation'].map((s, i) => (
+                <li key={i} className="flex items-center gap-3 text-slate-700 font-medium">
+                  <FaArrowRight className="text-[#00ADB5] text-xs flex-shrink-0" />
+                  {s}
+                </li>
+              ))}
             </ul>
           </motion.div>
         </div>
 
-        <div className="ml-0 md:ml-10">
+        <div>
           <motion.h2 
-            className="text-2xl font-bold text-[#fe5d44] mb-8 text-center md:text-left"
+            className="text-xl font-bold text-[#E94560] mb-8 flex items-center gap-2"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.6 }}
             viewport={{ once: true, amount: 0.3 }}
           >
-            Common Special needs include
+            <span className="w-8 h-8 rounded-lg bg-[#0F3460] flex items-center justify-center text-white text-xs"><FaCheck /></span>
+            Common Special Needs Include
           </motion.h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-12">
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              viewport={{ once: true, amount: 0.3 }}
-            >
-              <h3 className="text-lg font-bold text-gray-800 mb-4 uppercase">NEURODEVELOPMENTAL THERAPY:</h3>
-              <ul className="list-disc list-inside space-y-2 text-gray-600">
-                <li>Poor Head Control</li>
-                <li>Poor Trunk Control</li>
-                <li>Poor Sitting Balance</li>
-                <li>Difficulty in Crawling</li>
-                <li>Poor Standing Balance and Walking</li>
-              </ul>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true, amount: 0.3 }}
-            >
-              <h3 className="text-lg font-bold text-gray-800 mb-4 uppercase">SENSORY INTEGRATION THERAPY:</h3>
-              <ul className="list-disc list-inside space-y-2 text-gray-600 text-sm md:text-base leading-relaxed">
-                <li>Fear of Height (gravitational insecurity)</li>
-                <li>Aversion to touch eg., refuse to hair cut and nail cut, refuse to wear certain textured cloth, avoid Sticky things, feel irritable while walking in grass with bare foot.</li>
-                <li>Difficulty in concentrate an activity.</li>
-                <li>Difficulty in sitting straight for long period. (frequently changing the posture)</li>
-                <li>Closes ear for loud noise and seek more noise</li>
-                <li>Hyperactivity and inattention</li>
-                <li>Poor Social Interaction</li>
-                <li>Clumsiness and Poor Gross and Fine Motor Co-ordination</li>
-              </ul>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              viewport={{ once: true, amount: 0.3 }}
-            >
-              <h3 className="text-lg font-bold text-gray-800 mb-4 uppercase">HAND WRITING IMPROVEMENT:</h3>
-              <ul className="list-disc list-inside space-y-2 text-gray-600">
-                <li>Poor Legibility</li>
-                <li>Inadequate Spacing and Size</li>
-                <li>Slow Writing</li>
-                <li>Poor Copying</li>
-                <li>Mirror Image in Writing eg, Write "WAS" as "SAW"</li>
-              </ul>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              viewport={{ once: true, amount: 0.3 }}
-            >
-              <h3 className="text-lg font-bold text-gray-800 mb-4 uppercase">COGNITIVE FUNCTION:</h3>
-              <ul className="list-disc list-inside space-y-2 text-gray-600">
-                <li>Poor Memory</li>
-                <li>Poor Attention and Concentration</li>
-                <li>Poor Problem Solving</li>
-                <li>Poor Judgement</li>
-              </ul>
-            </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {[
+              {
+                title: 'Neurodevelopmental Therapy',
+                items: ['Poor Head Control', 'Poor Trunk Control', 'Poor Sitting Balance', 'Difficulty in Crawling', 'Poor Standing Balance and Walking'],
+              },
+              {
+                title: 'Sensory Integration Therapy',
+                items: ['Fear of Height (gravitational insecurity)', 'Aversion to touch — refuse to hair cut and nail cut, refuse to wear certain textured cloth', 'Difficulty in concentrating on an activity', 'Difficulty in sitting straight for long periods', 'Closes ear for loud noise and seeks more noise', 'Hyperactivity and inattention', 'Poor Social Interaction', 'Clumsiness and Poor Gross and Fine Motor Co-ordination'],
+              },
+              {
+                title: 'Handwriting Improvement',
+                items: ['Poor Legibility', 'Inadequate Spacing and Size', 'Slow Writing', 'Poor Copying', 'Mirror Image in Writing e.g. Write "WAS" as "SAW"'],
+              },
+              {
+                title: 'Cognitive Function',
+                items: ['Poor Memory', 'Poor Attention and Concentration', 'Poor Problem Solving', 'Poor Judgement'],
+              },
+            ].map((section, si) => (
+              <motion.div
+                key={si}
+                className="bg-white rounded-2xl p-7 shadow-[0_4px_24px_rgba(0,0,0,0.06)] border border-slate-100"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: si * 0.1 }}
+                viewport={{ once: true, amount: 0.2 }}
+              >
+                <h3 className="text-base font-bold text-[#0F3460] mb-4 uppercase tracking-wide">{section.title}</h3>
+                <ul className="space-y-2.5">
+                  {section.items.map((item, i) => (
+                    <li key={i} className="flex items-start gap-2.5 text-slate-600 text-sm leading-relaxed">
+                      <FaArrowRight className="text-[#E94560] text-xs mt-1.5 flex-shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
           </div>
         </div>
       </div>

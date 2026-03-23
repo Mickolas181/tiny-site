@@ -25,69 +25,66 @@ const autismData = [
 
 export default function AboutAutism() {
   return (
-    <div className="bg-white min-h-screen font-sans">
-      <div className="relative h-[300px] md:h-[400px] bg-gray-800 flex items-center justify-center text-white overflow-hidden">
+    <div className="bg-[#F8FAFC] min-h-screen overflow-hidden">
+      <div className="relative h-[300px] md:h-[400px] flex items-center justify-center text-white overflow-hidden">
         <div 
-          className="absolute inset-0 bg-cover bg-center opacity-60 brightness-75"
+          className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url("${autismBg}")` }}
         ></div>
+        <div className="absolute inset-0 bg-[#0F3460]/70"></div>
         
         <motion.div 
           className="relative z-10 text-center px-4"
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
         >
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 tracking-tight text-center">About Autism</h1>
-          <nav className="flex items-center justify-center gap-2 text-base md:text-lg font-semibold bg-white/10 backdrop-blur-sm px-4 md:px-6 py-2 rounded-full mx-auto w-fit border border-white/20">
-            <Link to="/" className="text-orange-400 hover:text-orange-300 transition-colors">Home</Link>
-            <span className="text-gray-400">/</span>
+          <h1 className="text-4xl md:text-6xl font-extrabold mb-4 tracking-tight drop-shadow-lg">About Autism</h1>
+          <nav className="flex items-center justify-center gap-2 text-sm font-semibold bg-white/10 backdrop-blur-sm px-5 py-2 rounded-full mx-auto w-fit border border-white/20">
+            <Link to="/" className="text-[#00ADB5] hover:text-white transition-colors">Home</Link>
+            <span className="text-white/40">/</span>
             <span className="text-white">About Autism</span>
           </nav>
         </motion.div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 py-20">
+      <div className="max-w-7xl mx-auto px-4 py-16 md:py-20">
         <motion.div 
           className="mb-8 md:mb-12 px-2"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
           viewport={{ once: true, amount: 0.3 }}
         >
-          <h2 className="text-2xl md:text-3xl font-bold text-[#113240] mb-4">India Autism Statistics</h2>
-          <p className="text-gray-600">The prevalence of autism in India has been increasing significantly over the years.</p>
+          <h2 className="text-2xl md:text-3xl font-extrabold text-[#0F3460] mb-3">India Autism Statistics</h2>
+          <p className="text-slate-500">The prevalence of autism in India has been increasing significantly over the years.</p>
         </motion.div>
 
         <motion.div 
-          className="overflow-x-auto rounded-xl shadow-2xl border border-gray-100 -mx-4 md:mx-0"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          className="overflow-x-auto rounded-2xl shadow-[0_4px_24px_rgba(0,0,0,0.06)] border border-slate-100 -mx-4 md:mx-0"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.15 }}
           viewport={{ once: true, amount: 0.1 }}
         >
           <table className="w-full text-left border-collapse bg-white">
             <thead>
-              <tr className="bg-[#cfe2f3] text-[#113240] uppercase text-xs md:text-sm font-bold tracking-wider">
-                <th className="px-4 md:px-8 py-4 md:py-6 border-b border-gray-200">Year</th>
-                <th className="px-4 md:px-8 py-4 md:py-6 border-b border-gray-200">Technology Development</th>
-                <th className="px-4 md:px-8 py-4 md:py-6 border-b border-gray-200">Rate of Autism</th>
+              <tr className="bg-[#0F3460] text-white uppercase text-xs md:text-sm font-semibold tracking-wider">
+                <th className="px-4 md:px-8 py-4 md:py-5">Year</th>
+                <th className="px-4 md:px-8 py-4 md:py-5">Technology Development</th>
+                <th className="px-4 md:px-8 py-4 md:py-5">Rate of Autism</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-gray-100">
+            <tbody className="divide-y divide-slate-100">
               {autismData.map((item, index) => (
-                <motion.tr 
+                <tr 
                   key={index} 
-                  className="hover:bg-blue-50/50 transition-colors text-[#113240]"
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  transition={{ duration: 0.4, delay: index * 0.05 }}
-                  viewport={{ once: true }}
+                  className="hover:bg-slate-50 transition-colors text-[#0F3460]"
                 >
-                  <td className="px-4 md:px-8 py-4 md:py-5 font-bold text-sm md:text-base">{item.year}</td>
-                  <td className="px-4 md:px-8 py-4 md:py-5 text-gray-700 italic text-sm md:text-base">{item.tech || "-"}</td>
-                  <td className="px-4 md:px-8 py-4 md:py-5 font-semibold text-orange-600 text-sm md:text-base whitespace-nowrap">{item.rate}</td>
-                </motion.tr>
+                  <td className="px-4 md:px-8 py-4 font-bold text-sm md:text-base">{item.year}</td>
+                  <td className="px-4 md:px-8 py-4 text-slate-500 text-sm md:text-base">{item.tech || "—"}</td>
+                  <td className="px-4 md:px-8 py-4 font-semibold text-[#E94560] text-sm md:text-base whitespace-nowrap">{item.rate}</td>
+                </tr>
               ))}
             </tbody>
           </table>
