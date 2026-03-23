@@ -3,9 +3,9 @@ import { motion } from 'framer-motion';
 import CountUp from 'react-countup';
 
 const services = [
-  { title: "Our Vision", text: "Our vision to provide autism free children.", bg: "bg-pink-100", color: "text-orange-500" },
-  { title: "Our Mission", text: "A program that meets the life skill needs of every child.", bg: "bg-blue-100", color: "text-blue-600" },
-  { title: "We care", text: "We care with compassion on every child even they are autism, ADHD.", bg: "bg-yellow-100", color: "text-yellow-500" },
+  { title: "Our Vision", text: "Our vision to provide autism free children.", bg: "bg-[#EFF6FF]", color: "text-[#0F3460]", icon: "👁️", accent: "border-[#0F3460]" },
+  { title: "Our Mission", text: "A program that meets the life skill needs of every child.", bg: "bg-[#E6FAFA]", color: "text-[#00ADB5]", icon: "🎯", accent: "border-[#00ADB5]" },
+  { title: "We Care", text: "We care with compassion on every child even they are autism, ADHD.", bg: "bg-[#FFF0F3]", color: "text-[#E94560]", icon: "💙", accent: "border-[#E94560]" },
 ];
 
 const statsData = [
@@ -27,35 +27,40 @@ export default function ServicesSection() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true, amount: 0.3 }}
         >
-          <p className="text-orange-500 text-xs md:text-sm font-bold uppercase tracking-wide">Service We Provide</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Providing Good Qualities</h2>
+          <p className="text-[#00ADB5] text-xs md:text-sm font-bold uppercase tracking-widest">Service We Provide</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-[#0F3460]">Providing <span className="text-[#E94560]">Good Qualities</span></h2>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {services.map((item, index) => (
             <motion.div
               key={index}
-              className={item.bg + " rounded-3xl p-8 text-center"}
+              className={item.bg + ` rounded-2xl p-8 md:p-10 text-center shadow-md hover:shadow-xl hover:-translate-y-3 transition-all duration-300 border-t-4 ${item.accent} relative overflow-hidden group cursor-pointer`}
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
               viewport={{ once: true, amount: 0.3 }}
             >
-              <h3 className={item.color + " text-2xl font-bold mb-4"}>{item.title}</h3>
-              <p className="text-gray-700">{item.text}</p>
+              <div className="relative z-10 w-16 h-16 mx-auto bg-white rounded-2xl shadow-md flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <span className="text-3xl">{item.icon}</span>
+              </div>
+              <h3 className={item.color + " text-2xl font-extrabold mb-4 relative z-10"}>{item.title}</h3>
+              <p className="text-slate-600 font-medium relative z-10 leading-relaxed">{item.text}</p>
+              <div className={`absolute bottom-0 left-0 h-1 w-0 group-hover:w-full transition-all duration-500 ${item.accent.replace('border-','bg-')}`} />
             </motion.div>
           ))}
         </div>
 
         <motion.div
-          className="mt-16 md:mt-20 bg-[#e4f0f8] rounded-3xl py-10 md:py-12 px-4 md:px-6"
+          className="mt-16 md:mt-20 bg-[#0F3460] rounded-2xl py-10 md:py-12 px-4 md:px-6"
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true, amount: 0.3 }}
         >
           <div className="text-center mb-10">
-            <h2 className="text-3xl md:text-4xl font-semibold text-[#fe5d44]">Stats</h2>
+            <p className="text-[#00ADB5] text-xs font-bold uppercase tracking-widest mb-1">Numbers Speak</p>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-white">Our <span className="text-[#E94560]">Impact</span></h2>
           </div>
           <div className="grid grid-cols-2 md:flex md:flex-row justify-around items-center gap-6 md:gap-10">
             {statsData.map((stat, index) => (
@@ -67,10 +72,10 @@ export default function ServicesSection() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true, amount: 0.3 }}
               >
-                <h3 className="text-4xl md:text-6xl font-extrabold text-[#113240] mb-2 tracking-tight">
+                <h3 className="text-4xl md:text-6xl font-extrabold text-[#00ADB5] mb-2 tracking-tight">
                   <CountUp start={0} end={stat.number} duration={3} enableScrollSpy scrollSpyOnce />
                 </h3>
-                <p className="text-sm md:text-lg font-bold text-[#113240]">{stat.label}</p>
+                <p className="text-sm md:text-lg font-bold text-white/80">{stat.label}</p>
               </motion.div>
             ))}
           </div>

@@ -27,9 +27,24 @@ export default function Header1() {
 
   const navLinks = [
     { name: 'Home', path: '/' },
-    { name: 'About Autism', path: '/about-autism' },
-    { name: 'About Us', path: '/about' },
-    { name: 'Services', path: '/services' },
+    { 
+      name: 'About', 
+      path: '#',
+      dropdown: [
+        { name: 'About Us', path: '/about' },
+        { name: 'About Autism', path: '/about-autism' }
+      ]
+    },
+    { 
+      name: 'Services', 
+      path: '/services',
+      dropdown: [
+        { name: 'Occupational Therapy', path: '/services/occupational-therapy' },
+        { name: 'Speech Therapy',       path: '/services/speech-therapy' },
+        { name: 'Physiotherapy',        path: '/services/physiotherapy' },
+        { name: 'Special Education',    path: '/services/special-education' }
+      ]
+    },
     { name: 'Contact Us', path: '/contact' },
   ];
 
@@ -46,22 +61,38 @@ export default function Header1() {
       {/* Desktop Navigation */}
       <ul className="hidden lg:flex items-center gap-8 font-medium text-gray-700">
         {navLinks.map((link) => (
-          <li key={link.path}>
-            <Link to={link.path} className="hover:text-orange-500 transition-colors">
+          <li key={link.name} className="relative group">
+            <Link to={link.path} className="hover:text-[#E94560] transition-colors py-6 flex items-center gap-1 font-bold text-[#0F3460]">
               {link.name}
+              {link.dropdown && (
+                <svg className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M19 9l-7 7-7-7" /></svg>
+              )}
             </Link>
+            {link.dropdown && (
+              <div className="absolute top-14 left-0 w-64 bg-white shadow-2xl rounded-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-4 group-hover:translate-y-0 z-50 overflow-hidden border border-gray-100">
+                <ul className="py-2">
+                  {link.dropdown.map((sublink) => (
+                    <li key={sublink.name}>
+                      <Link to={sublink.path} className="block px-6 py-3 text-[#0F3460] hover:bg-[#EFF6FF] hover:text-[#E94560] transition-all duration-300 border-b border-gray-50 last:border-none font-semibold hover:pl-8">
+                        {sublink.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </li>
         ))}
         <li>
-          <button className="bg-orange-500 text-white px-6 py-2 rounded-full hover:bg-orange-600 transition-colors">
-            Login
+          <button className="bg-[#E94560] text-white px-8 py-3 rounded-full hover:bg-[#B5223B] hover:shadow-lg hover:-translate-y-1 transition-all duration-300 font-bold shadow-md shadow-[#E94560]/30">
+            Enroll Now
           </button>
         </li>
       </ul>
 
       {/* Mobile Menu Button */}
       <button 
-        className="lg:hidden p-2 text-gray-700 hover:text-orange-500 transition-colors"
+        className="lg:hidden p-2 text-[#0F3460] hover:text-[#E94560] transition-colors"
         onClick={toggleMenu}
         aria-label="Toggle Menu"
       >
@@ -78,15 +109,15 @@ export default function Header1() {
           <Link 
             key={link.path} 
             to={link.path} 
-            className="text-xl font-bold text-gray-800 hover:text-orange-500 border-b border-gray-100 pb-2"
+            className="text-xl font-bold text-[#0F3460] hover:text-[#E94560] border-b border-gray-100 pb-2"
             onClick={() => setIsOpen(false)}
           >
             {link.name}
           </Link>
         ))}
-        <button className="mt-4 bg-orange-500 text-white px-8 py-3 rounded-xl font-bold hover:bg-orange-600 transition-colors w-full">
-          Login
-        </button>
+          <button className="mt-4 bg-[#E94560] text-white px-8 py-3 rounded-xl font-bold hover:bg-[#B5223B] transition-colors w-full">
+            Enroll Now
+          </button>
       </div>
     </header>
   );
