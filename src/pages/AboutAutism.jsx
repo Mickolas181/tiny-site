@@ -79,7 +79,7 @@ export default function AboutAutism() {
               {autismData.map((item, index) => (
                 <tr 
                   key={index} 
-                  className="hover:bg-slate-50 transition-colors text-[#0F3460]"
+                  className="hover:bg-[#E94560]/10 hover:scale-[1.01] hover:shadow-md transform transition-all duration-300 text-[#0F3460] relative z-0 hover:z-10 cursor-pointer"
                 >
                   <td className="px-4 md:px-8 py-4 font-bold text-sm md:text-base">{item.year}</td>
                   <td className="px-4 md:px-8 py-4 text-slate-500 text-sm md:text-base">{item.tech || "—"}</td>

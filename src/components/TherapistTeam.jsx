@@ -10,6 +10,7 @@ const therapists = [
     accentBorder: 'border-[#0F3460]',
     badgeBg: 'bg-[#0F3460] text-white',
     avatarBg: 'bg-gradient-to-br from-[#0F3460] to-[#1A4080]',
+    avatar: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=300&q=80',
   },
   {
     name: 'Mr. Karthik Suresh',
@@ -19,6 +20,7 @@ const therapists = [
     accentBorder: 'border-[#00ADB5]',
     badgeBg: 'bg-[#00ADB5] text-white',
     avatarBg: 'bg-gradient-to-br from-[#00ADB5] to-[#008B93]',
+    avatar: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=300&q=80',
   },
   {
     name: 'Ms. Deepa Lakshmi',
@@ -28,6 +30,7 @@ const therapists = [
     accentBorder: 'border-[#E94560]',
     badgeBg: 'bg-[#E94560] text-white',
     avatarBg: 'bg-gradient-to-br from-[#E94560] to-[#C93550]',
+    avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80',
   },
   {
     name: 'Ms. Anitha Selvam',
@@ -37,6 +40,7 @@ const therapists = [
     accentBorder: 'border-[#0F3460]',
     badgeBg: 'bg-[#0F3460] text-white',
     avatarBg: 'bg-gradient-to-br from-[#0F3460] to-[#1A4080]',
+    avatar: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=300&q=80',
   },
 ];
 
@@ -72,10 +76,9 @@ export default function TherapistTeam() {
               transition={{ duration: 0.5, delay: i * 0.1 }}
               viewport={{ once: true, amount: 0.2 }}
             >
-              <div className={`relative flex items-center justify-center ${t.avatarBg} w-full sm:w-36 min-h-[140px] sm:min-h-full flex-shrink-0`}>
-                <span className="text-4xl font-black text-white/90 tracking-wider select-none">
-                  {t.initials}
-                </span>
+              <div className={`relative flex items-center justify-center bg-slate-100 w-full sm:w-40 min-h-[160px] sm:min-h-full flex-shrink-0 overflow-hidden`}>
+                <img src={t.avatar} alt={t.name} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <div className={`absolute inset-0 ${t.avatarBg} opacity-20 mix-blend-multiply group-hover:opacity-10 transition-opacity duration-300`}></div>
               </div>
 
               <div className="p-6 flex flex-col justify-center gap-2 flex-1">

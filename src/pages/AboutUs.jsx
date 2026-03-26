@@ -30,9 +30,10 @@ export default function AboutUs() {
       <div className="max-w-5xl mx-auto px-6 md:px-4 py-12 md:py-16 text-slate-700 leading-relaxed space-y-10 md:space-y-12">
 
         <motion.section
-          className="bg-white rounded-2xl p-8 shadow-[0_4px_24px_rgba(0,0,0,0.06)] border border-slate-100"
+          className="bg-white rounded-2xl p-8 shadow-[0_4px_24px_rgba(0,0,0,0.06)] border border-slate-100 cursor-pointer"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
+          whileHover={{ y: -10, scale: 1.02, rotate: -1 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true, amount: 0.2 }}
         >
@@ -71,9 +72,10 @@ export default function AboutUs() {
         </motion.section>
 
         <motion.section
-          className="bg-white rounded-2xl p-8 shadow-[0_4px_24px_rgba(0,0,0,0.06)] border border-slate-100"
+          className="bg-white rounded-2xl p-8 shadow-[0_4px_24px_rgba(0,0,0,0.06)] border border-slate-100 cursor-pointer"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
+          whileHover={{ y: -10, scale: 1.02, rotate: -1 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true, amount: 0.2 }}
         >
@@ -86,9 +88,10 @@ export default function AboutUs() {
         </motion.section>
 
         <motion.section
-          className="bg-white rounded-2xl p-8 shadow-[0_4px_24px_rgba(0,0,0,0.06)] border border-slate-100"
+          className="bg-white rounded-2xl p-8 shadow-[0_4px_24px_rgba(0,0,0,0.06)] border border-slate-100 cursor-pointer"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
+          whileHover={{ y: -10, scale: 1.02, rotate: 1 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true, amount: 0.2 }}
         >
@@ -98,9 +101,10 @@ export default function AboutUs() {
         </motion.section>
 
         <motion.section
-          className="bg-white rounded-2xl p-8 shadow-[0_4px_24px_rgba(0,0,0,0.06)] border border-slate-100"
+          className="bg-white rounded-2xl p-8 shadow-[0_4px_24px_rgba(0,0,0,0.06)] border border-slate-100 cursor-pointer"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
+          whileHover={{ y: -10, scale: 1.02, rotate: -1 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true, amount: 0.2 }}
         >

@@ -84,10 +84,10 @@ export default function Testimonials() {
             <motion.div
               key={current}
               className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-8 md:p-12 text-center shadow-2xl w-full"
-              initial={{ opacity: 0, y: 20, scale: 0.98 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: -15, scale: 0.98 }}
-              transition={{ duration: 0.4 }}
+              initial={{ opacity: 0, x: -100 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: 100 }}
+              transition={{ duration: 0.6, type: "spring", bounce: 0.2 }}
             >
               <div className="flex justify-center mb-4 text-[#00ADB5]/60">
                 <FaQuoteLeft className="text-3xl" />
