@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Double+Ink:wght@100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-pri: rgb(85, 81, 227);
+  --color-sec: #2b2d77;
+}
+
+header ul li {
+  @apply px-2;
+}
+
+/* ... mitha code ... */
+
+.bg-primary {
+  background-color: var(--color-pri);
+}
+
+.bg-secondary {
+  background-color: var(--color-sec);
+}
+
+.mobile-nav {
+  @apply fixed top-10 left-0 bg-black w-full h-1/5;
+}
+
+.mobile-nav li {
+  @apply w-full h-full text-center border-b-2;
+}
+
+.hero-font {
+  font-family: "Bitcount Prop Double Ink", system-ui;
+}
+
+.project-desc {
+  @apply absolute left-0 right-0 bottom-[0px] top-0 bg-sec opacity-0 duration-500 active:opacity-100 hover:opacity-100;
+}
+
+.btn{
+  @apply bg-pri px-5 py-2 font-bold hover:border-2 border-white rounded;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+.bg-p{
+  background-color: brown;
+}
+
+.bg-s{
+  background-color: orangered;
+}
