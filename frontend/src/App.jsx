@@ -6,15 +6,15 @@ import Footer1 from './components/Footer1.jsx'
 import PageLoader from './components/PageLoader.jsx'
 import PageTransition from './components/PageTransition.jsx'
 import ScrollToTop from './pages/ScrollToTop.jsx'
+import AdminLogin from './pages/AdminLogin.jsx'
+import AdminDashboard from './pages/AdminDashboard.jsx'
 
 const HomePage = lazy(() => import('./pages/HomePage.jsx'))
 const AboutAutism = lazy(() => import('./pages/AboutAutism.jsx'))
 const AboutUs = lazy(() => import('./pages/AboutUs.jsx'))
 const Services = lazy(() => import('./pages/Services.jsx'))
 const ContactUs = lazy(() => import('./pages/ContactUs.jsx'))
-const AdminLogin = lazy(() => import('./pages/AdminLogin.jsx'))
 const ServiceDetailModule = lazy(() => import('./pages/ServiceDetail.jsx'))
-const AdminDashboard = lazy(() => import('./pages/AdminDashboard.jsx'))
 
 function AnimatedRoutes() {
   const location = useLocation()
